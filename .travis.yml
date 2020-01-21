@@ -23,5 +23,5 @@ deploy:
     - repos/katello/**/katello/CHANGELOG.md
   skip_cleanup: true
   on:
-    tags: true
+    tags: false
     branch: autotool
