@@ -22,6 +22,7 @@ deploy:
   file:
     - "./cherry_picks_*"
     - "repos/katello/**/katello/CHANGELOG.md"
+  file_glob: true
   skip_cleanup: true
   on:
     tags: false
