@@ -1,7 +1,7 @@
 #!/bin/bash
 set -rv
 
-for config in `ls configs/katello/*.yaml | sort -V | tail -n 3`
+for config in `ls configs/katello/*.yaml | sort -V | grep -v nightly | tail -n 3`
 do
   config_number=`basename ${config} .yaml`
   echo $config_number
