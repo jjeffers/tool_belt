@@ -18,7 +18,7 @@ deploy:
   api_key: $GITHUB_ACCESS_TOKEN
   file:
     - "./cherry_picks_*"
-    - "repos/katello/**/katello/CHANGELOG.md"
+    - "./CHANGELOG_*.md"
   file_glob: true
   skip_cleanup: true
   on:
