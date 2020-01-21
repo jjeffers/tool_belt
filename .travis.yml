@@ -11,10 +11,7 @@ install:
 
 script:
   - bundle exec rake test
-  - ./tools.rb setup-environment configs/katello/3.14.yaml
-  - ./tools.rb cherry-picks configs/katello/3.14.yaml
-  - ./tools.rb changelog configs/katello/3.14.yaml
-  - ls -al
+  - ./run-tools.sh
 
 deploy:
   provider: releases
