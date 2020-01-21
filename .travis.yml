@@ -14,3 +14,12 @@ script:
   - ./tools.rb setup-environment configs/katello/3.14.yaml
   - ./tools.rb cherry-picks configs/katello/3.14.yaml
   - ./tools.rb changelog configs/katello/3.14.yaml
+
+deploy:
+  provider: releases
+  api_key: "GITHUB_ACCESS_TOKEN"
+  file:
+    - cherry_picks_*
+    - repos/katello/*/katello/CHANGELOG.md
+  skip_cleanup: true
+  draft: true
