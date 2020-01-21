@@ -1,6 +1,4 @@
 sudo: false
-env:
-  - GITHUB_ACCESS_TOKEN=4270c976786dd533f90453de18c01aa7334541a0
 
 language:
   - ruby
