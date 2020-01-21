@@ -16,9 +16,12 @@ script:
   - ./tools.rb changelog configs/katello/3.14.yaml
 
 deploy:
-  provider: pages
+  provider: releases
+  api_key: $GITHUB_ACCESS_TOKEN
+  file:
+    - cherry_picks_*
+    - repos/katello/**/katello/CHANGELOG.md
   skip_cleanup: true
-  github_token: $GITHUB_ACCESS_TOKEN
-  keep_history: true
   on:
-    branch: master
+    tags: true
+    branch: autotool
