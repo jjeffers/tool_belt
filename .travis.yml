@@ -19,9 +19,9 @@ deploy:
   provider: releases
   api_key: $GITHUB_ACCESS_TOKEN
   file:
-    - "cherry_picks_*"
+    - "./cherry_picks_*"
     - "repos/katello/**/katello/CHANGELOG.md"
   skip_cleanup: true
   on:
     tags: false
-    branch: autotool
+    all_branches: true
